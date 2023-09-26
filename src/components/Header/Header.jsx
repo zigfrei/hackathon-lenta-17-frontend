@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import "./Header.css"
 
 function Header() {
@@ -7,28 +7,28 @@ function Header() {
             <nav className='header__nav'>
                 <ul className='header__list'>
                     <li>
-                        <Link 
+                        <NavLink 
                             to="/firstroute"
                             className='header__link'
                         >
                             First Route
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link 
+                        <NavLink 
                             to="/secondroute"
                             className='header__link'
                         >
                             Second Route
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link 
+                        <NavLink 
                             to="/thirdroute"
                             className='header__link'
                         >
                             Third Route
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
