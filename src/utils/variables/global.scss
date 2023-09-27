@@ -1,0 +1,14 @@
+//рандомные переменные, потом будем добавлять глобальные переменные согластно макета
+:root {
+  --color-white: #ffffff;
+  --color-black: #121210;
+}
+
+@mixin h2_font {
+  font-size: 32px;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: 135%;
+}
+
+$breakpoint-mobile: 550px;
