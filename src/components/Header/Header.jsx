@@ -1,39 +1,31 @@
-import { NavLink } from 'react-router-dom'
-import "./Header.css"
+import { NavLink } from 'react-router-dom';
+import { classNames } from '../../helpers/classNames';
+import style from './Header.module.scss';
 
 function Header() {
-    return (
-        <header className='header'>
-            <nav className='header__nav'>
-                <ul className='header__list'>
-                    <li>
-                        <NavLink 
-                            to="/firstroute"
-                            className='header__link'
-                        >
-                            First Route
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink 
-                            to="/secondroute"
-                            className='header__link'
-                        >
-                            Second Route
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink 
-                            to="/thirdroute"
-                            className='header__link'
-                        >
-                            Third Route
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    )
+  return (
+    <header className={style.header}>
+      <nav className={style.header__nav}>
+        <ul className={style.header__list}>
+          <li>
+            <NavLink to='/firstroute' className={style.header__link}>
+              First Route
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to='/secondroute' className={style.header__link}>
+              Second Route
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to='/thirdroute' className={style.header__link}>
+              Third Route
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
