@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { Table } from 'antd';
 import { getUser } from '../../services/slices/userSlice';
+import Charts from '../../components/Charts/Charts';
 // import style from './Main.module.scss';
 
 function Main() {
@@ -39,6 +40,7 @@ function Main() {
     <>
       <div>
         <Table columns={columns} dataSource={dataSource}></Table>
+        <Charts />
       </div>
     </>
   );
