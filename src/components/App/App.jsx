@@ -1,41 +1,31 @@
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom"
-
-import './App.css'
-
-import Main from "../Main/Main"
-import FirstRoute from  "../FirstRoute/FirstRoute"
-import SecondRoute from "../SecondRoute/SecondRoute"
-import ThirdRoute from "../ThirdRoute/ThirdRoute"
+  Routes,
+  Route,
+} from 'react-router-dom';
+import style from './App.module.scss';
+import Header from '../Header/Header';
+import Main from '../../pages/Main/Main';
+import FirstRoute from '../../pages/FirstRoute/FirstRoute';
+import SecondRoute from '../../pages/SecondRoute/SecondRoute';
+import ThirdRoute from '../../pages/ThirdRoute/ThirdRoute';
 
 function App() {
-
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main />,
-    },
-    {
-      path: "/firstroute",
-      element: <FirstRoute />,
-    },
-    {
-      path: "/secondroute",
-      element: <SecondRoute />,
-    },
-    {
-      path: "/thirdroute",
-      element: <ThirdRoute />,
-    },
-  ]);
-
   return (
-    <div className="page">
-      <RouterProvider router={router} />
+    <div className={style.app}>
+      <Header />
+      <main className={style.main}>
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/firstroute' element={<FirstRoute />} />
+          <Route path='/secondroute' element={<SecondRoute />} />
+          <Route path='/thirdroute' element={<ThirdRoute />} />
+        </Routes>
+      </main>
+      {/* <Footer /> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
