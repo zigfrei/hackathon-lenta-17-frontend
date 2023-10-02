@@ -1,19 +1,41 @@
+@use '/src/utils/variables/global';
+
 .header {
-  margin-top: 24px;
   max-width: 1280px;
   width: 100%;
+  min-height: 57px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   z-index: 100;
+  margin: 34px 31px 0 31px;
 }
 
-.header__nav {
+.header__container {
+  max-width: 1280px;
+  width: 100%;
+  min-height: 57px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  // align-items: center;
 }
 
-.header__list {
-  list-style: none;
+.header__image {
+  width: 202.781px;
+  height: 46px;
+  flex-shrink: 0;
+  padding: 0;
 }
 
-.header__link {
+.header__title {
+  margin: 6px 0 0 80.22px;
+  // padding-top: 6px;
+  font-family: global.$primary-font;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  // min-height: 57px;
 }

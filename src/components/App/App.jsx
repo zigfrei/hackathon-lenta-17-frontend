@@ -7,20 +7,16 @@ import {
 import style from './App.module.scss';
 import Header from '../Header/Header';
 import Main from '../../pages/Main/Main';
-import FirstRoute from '../../pages/FirstRoute/FirstRoute';
-import SecondRoute from '../../pages/SecondRoute/SecondRoute';
-import ThirdRoute from '../../pages/ThirdRoute/ThirdRoute';
+import Login from '../../pages/Login/Login';
 
 function App() {
   return (
     <div className={style.app}>
-      <Header />
+      {/* <Header /> */}
       <main className={style.main}>
         <Routes>
-          <Route path='/' element={<Main />} />
-          <Route path='/firstroute' element={<FirstRoute />} />
-          <Route path='/secondroute' element={<SecondRoute />} />
-          <Route path='/thirdroute' element={<ThirdRoute />} />
+          <Route path='/' element={<Login />} />
+          <Route path='/thirdroute' element={<Main />} />
         </Routes>
       </main>
       {/* <Footer /> */}

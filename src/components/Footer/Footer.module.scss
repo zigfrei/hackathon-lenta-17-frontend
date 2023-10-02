@@ -1,0 +1,27 @@
+@use '/src/utils/variables/global';
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 42px auto;
+    padding: 0;
+    // color: global.$text-color-gray;
+    // font-family: global.$secondary-font;
+    // font-size: 16px;
+    // font-weight: 400;
+    // line-height: normal;
+    max-width: 400px;
+    width: 100%;
+    min-height: 42px;
+}
+
+.footer__signin_text {
+    text-align: center;
+    color: global.$text-color-gray;
+    font-family: global.$secondary-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px
+}
