@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Table } from 'antd';
 import { getUser } from '../../services/slices/userSlice';
 import Charts from '../../components/Charts/Charts';
-import Login from '../../components/Login/Login';
+import Login from '../Login/Login';
 // import style from './Main.module.scss';
 
 function Main() {
@@ -40,7 +40,7 @@ function Main() {
   return (
     <>
       <div>
-        <Login />
+        {/* <Login /> */}
         {/* <Table columns={columns} dataSource={dataSource}></Table>
         <Charts /> */}
       </div>
