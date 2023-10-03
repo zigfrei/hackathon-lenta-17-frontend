@@ -16,7 +16,7 @@ function App() {
       <main className={style.main}>
         <Routes>
           <Route path='/' element={<Login />} />
-          <Route path='/thirdroute' element={<Main />} />
+          <Route path='/main' element={<Main />} />
         </Routes>
       </main>
       {/* <Footer /> */}
