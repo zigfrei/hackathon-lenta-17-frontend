@@ -1,0 +1,125 @@
+@use '/src/utils/variables/global';
+
+.inputWrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 400px;
+  height: 56px;
+  position: absolute;
+  font-family: global.$secondary-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: global.$text-color-anthracite-dark;
+  padding: 28px 0 8px 16px;
+  margin: 0;
+  border-radius: 12px;
+  border: 1px solid global.$border-color-anthracite-20;
+  outline: none;
+
+  &:focus {
+    outline: 2px solid global.$border-color-blue-blue;
+    outline-offset: -1px;
+    &::placeholder {
+      color: global.$text-color-anthracite-light;
+    }
+  }
+
+  &::placeholder {
+    color: global.$text-color-white;
+  }
+
+  &:hover {
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  &.invalid {
+    outline: 2px solid global.$text-colorr-crimson-crimson;
+  }
+}
+
+.error {
+  align-items: center;
+  padding-top: 60px;
+  color: global.$text-colorr-crimson-crimson;
+  font-family: global.$primary-font;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 20px;
+}
+
+.label {
+  width: 300px;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  top: 18px;
+  left: 16px;
+  position: absolute;
+  font-family: global.$secondary-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: global.$text-color-anthracite-dark;
+  transition: top 0.3s ease, color 0.3s ease, font-family 0.3s ease,
+    font-size 0.3s ease, font-weight 0.3s ease;
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+  top: 8px;
+  color: global.$text-color-anthracite-80;
+  font-family: global.$primary-font;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input:disabled + .label {
+  color: global.$text-color-anthracite-light;
+}
+
+.resetButton {
+  all: unset;
+  z-index: 20;
+  height: 25px;
+  width: 24px;
+  top: 16px;
+  right: 12px;
+  background-image: url('../../images/IconRemoveLarge.svg');
+  background-color: transparent;
+  position: absolute;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.resetButtonPassword {
+  right: 40px;
+}
+
+.showPasswordButton {
+  all: unset;
+  z-index: 20;
+  height: 24px;
+  width: 24px;
+  top: 16px;
+  right: 12px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.showPassword {
+  background-image: url('../../images/eye-icon.svg');
+}
+
+.hidePassword {
+  background-image: url('../../images/icon-eye-close.svg');
+}
