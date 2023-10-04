@@ -1,12 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import { classNames } from '../../helpers/classNames';
-import style from './Login.module.scss';
+import style from './AuthForm.module.scss';
 import { InputField } from '../InputField/InputField';
 import { ButtonSizeL } from '../ButtonSizeL/ButtonSizeL';
 import useFormValidation from '../../helpers/useFormValidation';
 import DownloadIcon from '../../images/IconDownloadLarge.svg?react';
 
-function Login() {
+function AuthForm() {
   const {
     errors,
     isValid,
@@ -44,11 +44,12 @@ function Login() {
           setValues={setValues}
         />
         <div className={style.buttonWrapper}>
-          <ButtonSizeL ><DownloadIcon/></ButtonSizeL >
+          <ButtonSizeL>
+            <DownloadIcon />
+          </ButtonSizeL>
         </div>
       </div>
     </form>
   );
 }
-
-export default Login;
+export default AuthForm;
