@@ -1,0 +1,67 @@
+@use '/src/utils/variables/global';
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 400px;
+  height: 56px;
+  cursor: pointer;
+  font-family: global.$primary-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: global.$text-color-white;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  background: global.$border-color-blue-blue;
+  border: none;
+  outline: none;
+  &:hover {
+    background: global.$text-color-blue-light;
+    color: global.$border-color-blue-blue;
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$border-color-blue-blue;}
+      }
+    }
+  }
+  &:active {
+    background: global.$color-blue-light;
+    color: global.$text-color-white;
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$text-color-white;}
+      }
+    }
+  }
+
+  &:disabled {
+    cursor: unset;
+    background: global.$border-color-anthracite-20;
+    color: global.$text-color-anthracite-dark;
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$text-color-anthracite-dark;}
+      }
+    }
+  }
+}
+
+.iconWrapper {
+  padding-left: 13px;
+  padding-top: 5px;
+  svg {
+      height: 24px;
+      width: 24px;
+    path {
+      fill: global.$text-color-white;}
+  }
+}
