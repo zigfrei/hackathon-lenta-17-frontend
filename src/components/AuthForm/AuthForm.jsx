@@ -1,16 +1,20 @@
 import { NavLink } from 'react-router-dom';
+import { useCallback, useMemo, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from '../../helpers/classNames';
 import style from './AuthForm.module.scss';
 import { InputField } from '../InputField/InputField';
 import { ButtonSizeL } from '../ButtonSizeL/ButtonSizeL';
 import useFormValidation from '../../helpers/useFormValidation';
 import DownloadIcon from '../../images/IconDownloadLarge.svg?react';
+import { loginUser } from '../../services/slices/authSlice';
 
 function AuthForm() {
   const {
     errors,
     isValid,
     setValues,
+    setErrors,
     handleSecondPasswordChange,
     setIsValid,
     handleChange,
@@ -19,11 +23,29 @@ function AuthForm() {
     resetForm,
     values,
   } = useFormValidation();
+
+  const { isLoading, registerSucces, registerError } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
+  const sendData = (e) => {
+    e.preventDefault();
+    // Here would be hash function for password if backend have registration
+    const sendData = {
+      email: values.email,
+      password: values.password,
+    };
+
+    console.log(sendData);
+    dispatch(loginUser(sendData));
+  };
+
   return (
     <form className={style.main}>
       <h2 className={style.title}>Вход</h2>
       <div className={style.inputWrapper}>
         <InputField
+          setErrors={setErrors}
+          setIsValid={setIsValid}
           label={'Рабочий e-mail'}
           type='email'
           errors={errors}
@@ -34,6 +56,8 @@ function AuthForm() {
           setValues={setValues}
         />
         <InputField
+          setErrors={setErrors}
+          setIsValid={setIsValid}
           label={'Пароль'}
           type='password'
           errors={errors}
@@ -44,8 +68,13 @@ function AuthForm() {
           setValues={setValues}
         />
         <div className={style.buttonWrapper}>
-          <ButtonSizeL>
-            <DownloadIcon />
+          <ButtonSizeL
+            loader={true}
+            disabled={!isValid}
+            onClick={(e) => sendData(e)}
+            placeholder={'Войти'}
+          >
+            {/* <DownloadIcon/> */}
           </ButtonSizeL>
         </div>
       </div>

@@ -6,6 +6,7 @@ import style from './InputField.module.scss';
 
 export const InputField = ({
   label,
+  setIsValid,
   disabled,
   type,
   placeholder,
@@ -14,6 +15,7 @@ export const InputField = ({
   handleChange,
   values,
   setValues,
+  setErrors,
   ...props
 }) => {
   const inputSettings = {
@@ -53,6 +55,8 @@ export const InputField = ({
   const resetClick = () => {
     inputRef.current.value = '';
     setValues({ ...values, [inputRef.current.name]: '' });
+    setIsValid(false);
+    setErrors({ ...errors, [inputSettings[type].name]: false });
   };
 
   return (
@@ -92,16 +96,17 @@ export const InputField = ({
           ])}
         />
       )}
-      {disabled ? '' : (inputSettings[type].type === 'password'
-         && (
-           <button
-             type='button'
-             onClick={() => setVisible(!visible)}
-             className={classNames(style.showPasswordButton, {}, [
-               visible ? style.showPassword : style.hidePassword,
-             ])}
-           />
-         ))}
+      {disabled
+        ? ''
+        : inputSettings[type].type === 'password' && (
+          <button
+            type='button'
+            onClick={() => setVisible(!visible)}
+            className={classNames(style.showPasswordButton, {}, [
+              visible ? style.showPassword : style.hidePassword,
+            ])}
+          />
+        )}
       <span className={style.error}>
         {errors[inputSettings[type].name]
           ? `${inputSettings[type].errorText}`

@@ -32,8 +32,8 @@
 * [Ревазашвили Георгий](https://github.com/zigfrei).
 * [Асланиди Екатерина](https://github.com/katyaslanidi).
 ### Backend
-* [Киселев Никита](https://github.com/).
-* [Мельник Вячеслав](https://github.com/).
+* [Киселев Никита](https://github.com/10-42).
+* [Мельник Вячеслав](https://github.com/dmsvalik).
 ### DS
 * [Горев Даниил](https://github.com/).
 * [Мокров Станислав](https://github.com/).
