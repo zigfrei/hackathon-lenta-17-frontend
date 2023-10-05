@@ -1,0 +1,50 @@
+@use '/src/utils/variables/global';
+
+.header__main {
+    display: flex;
+    flex-direction: row;
+    width: 401px;
+    // margin-left: 460px;
+    margin-right: 0;
+}
+
+.header__container {
+    width: 247px;
+    height: 60px;
+    background-color: #fff;
+    // margin-left: 654px;
+    border-radius: 12px 12px 0 0 ;
+}
+
+.header__container_main {
+    width: 154px;
+    height: 60px;
+    background-color: #fff;
+    // margin-left: 500px;
+    border-radius: 12px 12px 0 0 ;
+}
+
+.header__title_main {
+    font-family: global.$secondary-font;
+    color: var(--anthracite-dark, #4D4D4D);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 12px 12px 0 0 ;
+}
+
+.header__title {
+    font-family: global.$secondary-font;
+    color: var(--anthracite-dark, #4D4D4D);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    margin: 0;
+    padding: 14px 0 14px 0;
+    border-radius: 12px;
+    background-color: #fff;
+}
