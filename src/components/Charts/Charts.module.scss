@@ -1,18 +1,18 @@
 .charts {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.charts__buttons {
-
-}
-
-.charts__button {
-
+    max-width: 748px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #fff;
+    height: 453px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin: 10px;
 }
 
 .charts__chart {
-    margin-bottom: 24px;
+    max-width: 758px;
+    width: 100%;
+    border-radius: 20px;
+
+    // margin-bottom: 24px;
 }

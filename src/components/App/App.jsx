@@ -13,12 +13,12 @@ function App() {
   return (
     <div className={style.app}>
       {/* <Header /> */}
-      <main className={style.main}>
-        <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/main' element={<Main />} />
-        </Routes>
-      </main>
+      {/* <main className={style.main}> */}
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/main' element={<Main />} />
+      </Routes>
+      {/* </main> */}
       {/* <Footer /> */}
     </div>
   );
