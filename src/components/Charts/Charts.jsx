@@ -17,8 +17,8 @@ function Charts() {
 
     const config = {
         data,
-        width: 800,
-        height: 400,
+        width: 738,
+        height: 453,
         autoFit: false,
         xField: 'year',
         yField: 'value',
@@ -45,17 +45,9 @@ function Charts() {
 
     return (
         <div className={style.charts}>
-            <section className={style.charts__buttons}>
-                <button className={style.charts__button} type="button" onClick={downloadImage} style={{ marginRight: 24 }}>
-                    Export Image
-                </button>
-                <button className={style.charts__button} type="button" onClick={toDataURL}>
-                    Get base64
-                </button>
-            </section>
-            <section className={style.charts__chart}>
+            {/* <section className={style.charts__chart}> */}
                 <Line {...config} onReady={(chartInstance) => (chart = chartInstance)} />
-            </section>
+            {/* </section> */}
         </div>
     );
 };

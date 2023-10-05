@@ -1,25 +1,24 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { classNames } from '../../helpers/classNames';
 import style from './Header.module.scss';
 import Logo from '../Logo/Logo';
 
-function Header({ isLoggedIn }) {
+function Header() {
+
+  const location = useLocation().pathname;
+
   return (
     <header className={style.header}>
-      {isLoggedIn ?
-        (
-          <>
-          </>
-        ) : (
-          <div className={style.header__container}>
-            <Logo />
-            {/* <img src='../../images/logo.svg' className={style.header__image} al/> */}
-            <h1 className={style.header__title}>
-              Система прогнозирования спроса
-            </h1>
-          </div>
-        )
-      }
+      <div className={style.header__container}>
+        <Logo />
+        <h1 className={
+          location === '/' ?
+          style.header__title :
+          style.header__title_main
+          }>
+          Система прогнозирования спроса
+        </h1>
+      </div>
     </header>
   );
 }
