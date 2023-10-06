@@ -7,10 +7,12 @@ import Footer from '../../components/Footer/Footer';
 
 function Login() {
   return (
-    <div className={style.main}>
-      <Header isLoggedIn={false} />
-      <AuthForm />
-      <Footer isLoggedIn={false} />
+    <div className={style.page}>
+      <Header />
+      <main className={style.main}>
+        <AuthForm />
+      </main>
+      <Footer />
     </div>
   );
 }

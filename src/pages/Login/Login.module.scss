@@ -1,39 +1,18 @@
 @use '/src/utils/variables/global';
 
-.main {
-  margin: 0 auto;
-  width: 400px;
+.page {
+  max-width: 1920px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: global.$border-color-blue-blue;
 }
 
-.title {
+.main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 96px - 108px);
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  padding: 0;
-  padding-bottom: 43px;
-  color: global.$text-color-black;
-  font-family: global.$primary-font;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: normal;
-  font-size: normal;
-}
-
-.text {
-  margin: 0 auto;
-  padding: 0;
-  color: global.$text-color-gray;
-  font-family: global.$secondary-font;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-  font-size: normal;
-}
-
-.inputWrapper {
-  width: 100%;
-}
-
-.buttonWrapper {
-  padding-top: 20px;
 }

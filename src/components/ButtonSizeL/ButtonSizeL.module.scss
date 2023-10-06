@@ -14,32 +14,35 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
-  color: global.$text-color-white;
+  color: global.$border-color-blue-blue;
   padding: 0;
   margin: 0;
   border-radius: 12px;
-  background: global.$border-color-blue-blue;
+  background: global.$text-color-sunny-sunny;
   border: none;
   outline: none;
   &:hover {
-    background: global.$text-color-blue-light;
-    color: global.$border-color-blue-blue;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+
+    background: global.$text-color-sunny-tan;
+    color: global.$text-color-blue-dark;
     .iconWrapper {
       svg {
         path {
-          fill: global.$border-color-blue-blue;}
+          fill: global.$text-color-blue-dark;}
       }
     }
   }
   &:active {
-    background: global.$color-blue-light;
-    color: global.$text-color-white;
+    background: global.$textar-color-sunny-dark;
+    color:  global.$text-color-blue-dark;;
     .iconWrapper {
       svg {
         path {
           fill: global.$text-color-white;}
       }
     }
+     transition: background-color 0.3s ease-in-out, color 0.3s ease;
   }
 
   &:disabled {
@@ -53,6 +56,7 @@
       }
     }
   }
+  transition: background-color 0.3s ease-in-out, color 0.3s ease;
 }
 
 .iconWrapper {
@@ -62,14 +66,14 @@
       height: 24px;
       width: 24px;
     path {
-      fill: global.$text-color-white;}
+      fill:  global.$text-color-blue-dark;}
   }
 }
 
 .iconDownloadWrapper {
   width: 24px;
     height: 24px;
-    border: 2px solid #FFF;
+    border: 2px solid global.$text-color-blue-dark;;
     border-bottom-color: transparent;
     border-radius: 50%;
     display: inline-block;
