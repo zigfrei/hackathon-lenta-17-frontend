@@ -34,7 +34,12 @@ export const ButtonSizeL = ({
     <>
       <button
         disabled={disabled || false}
-        className={classNames(style.button, {}, [])}
+        // className={classNames(style.button, {}, [])}
+        className={
+          isLoading ?
+            style.button_loading :
+            style.button
+        }
         type={type || 'button'}
         onClick={onClickFunc}
       >
