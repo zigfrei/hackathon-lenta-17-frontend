@@ -12,14 +12,13 @@ import Login from '../../pages/Login/Login';
 function App() {
   return (
     <div className={style.app}>
-      {/* <Header /> */}
-      {/* <main className={style.main}> */}
-      <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='/main' element={<Main />} />
-      </Routes>
-      {/* </main> */}
-      {/* <Footer /> */}
+      <div className={style.main}>
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/main' element={<Main />} />
+        </Routes>
+      </div>
+
     </div>
   );
 }

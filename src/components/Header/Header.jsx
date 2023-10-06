@@ -1,7 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { classNames } from '../../helpers/classNames';
 import style from './Header.module.scss';
-import Logo from '../Logo/Logo';
+import LogoExtraSmallWhite from '../LogoExtraSmallWhite/LogoExtraSmallWhite';
 
 function Header() {
 
@@ -10,12 +10,8 @@ function Header() {
   return (
     <header className={style.header}>
       <div className={style.header__container}>
-        <Logo />
-        <h1 className={
-          location === '/' ?
-          style.header__title :
-          style.header__title_main
-          }>
+        <LogoExtraSmallWhite />
+        <h1 className={style.header__title}>
           Система прогнозирования спроса
         </h1>
       </div>

@@ -40,33 +40,35 @@ function AuthForm() {
   };
 
   return (
-    <form className={style.main}>
-      <h2 className={style.title}>Вход</h2>
-      <div className={style.inputWrapper}>
-        <InputField
-          setErrors={setErrors}
-          setIsValid={setIsValid}
-          label={'Рабочий e-mail'}
-          type='email'
-          errors={errors}
-          isValid={isValid}
-          handleChange={handleChange}
-          values={values}
-          placeholder={'Placeholder'}
-          setValues={setValues}
-        />
-        <InputField
-          setErrors={setErrors}
-          setIsValid={setIsValid}
-          label={'Пароль'}
-          type='password'
-          errors={errors}
-          isValid={isValid}
-          handleChange={handleChange}
-          values={values}
-          placeholder={'Placeholder'}
-          setValues={setValues}
-        />
+    <section className={style.mainFormWrapper}>
+      <form className={style.main}>
+        <h2 className={style.title}>Вход</h2>
+        <div className={style.inputWrapper}>
+          <InputField
+            setErrors={setErrors}
+            setIsValid={setIsValid}
+            label={'E-mail'}
+            type='email'
+            errors={errors}
+            isValid={isValid}
+            handleChange={handleChange}
+            values={values}
+            placeholder={'petya@lenta.ru'}
+            setValues={setValues}
+          />
+          <InputField
+            setErrors={setErrors}
+            setIsValid={setIsValid}
+            label={'Пароль'}
+            type='password'
+            errors={errors}
+            isValid={isValid}
+            handleChange={handleChange}
+            values={values}
+            placeholder={'Пароль'}
+            setValues={setValues}
+          />
+        </div>
         <div className={style.buttonWrapper}>
           <ButtonSizeL
             loader={true}
@@ -77,8 +79,8 @@ function AuthForm() {
             {/* <DownloadIcon/> */}
           </ButtonSizeL>
         </div>
-      </div>
-    </form>
+      </form>
+    </section>
   );
 }
 export default AuthForm;

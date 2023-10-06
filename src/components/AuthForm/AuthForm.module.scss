@@ -1,8 +1,16 @@
 @use '/src/utils/variables/global';
 
-.main {
+.mainFormWrapper {
   margin: 0 auto;
-  width: 400px;
+  min-width: 440px;
+  min-height: 340px;
+  border-radius: 20px;
+  background-color: global.$text-color-white;
+}
+
+.main {
+  padding: 32px 20px;
+  // width: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -10,12 +18,12 @@
 .title {
   margin: 0 auto;
   padding: 0;
-  padding-bottom: 43px;
+  padding-bottom: 24px;
   color: global.$text-color-black;
   font-family: global.$primary-font;
   font-size: 40px;
   font-weight: 500;
-  line-height: normal;
+  line-height: 48px;
   font-size: normal;
 }
 
@@ -32,8 +40,10 @@
 
 .inputWrapper {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .buttonWrapper {
-  padding-top: 20px;
+  padding-top: 8px;
 }
