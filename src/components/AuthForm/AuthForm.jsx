@@ -45,7 +45,7 @@ function AuthForm() {
         />
         <div className={style.buttonWrapper}>
           <ButtonSizeL>
-            <DownloadIcon />
+            {/* <DownloadIcon /> */}
           </ButtonSizeL>
         </div>
       </div>

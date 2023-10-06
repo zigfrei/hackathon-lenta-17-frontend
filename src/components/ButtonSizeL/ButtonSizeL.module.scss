@@ -21,23 +21,29 @@
   background: global.$border-color-blue-blue;
   border: none;
   outline: none;
+
   &:hover {
     background: global.$text-color-blue-light;
     color: global.$border-color-blue-blue;
+
     .iconWrapper {
       svg {
         path {
-          fill: global.$border-color-blue-blue;}
+          fill: global.$border-color-blue-blue;
+        }
       }
     }
   }
+
   &:active {
     background: global.$color-blue-light;
     color: global.$text-color-white;
+
     .iconWrapper {
       svg {
         path {
-          fill: global.$text-color-white;}
+          fill: global.$text-color-white;
+        }
       }
     }
   }
@@ -46,22 +52,48 @@
     cursor: unset;
     background: global.$border-color-anthracite-20;
     color: global.$text-color-anthracite-dark;
+
     .iconWrapper {
       svg {
         path {
-          fill: global.$text-color-anthracite-dark;}
+          fill: global.$text-color-anthracite-dark;
+        }
       }
     }
   }
 }
 
 .iconWrapper {
-  padding-left: 13px;
+  padding-left: 5px;
   padding-top: 5px;
+
   svg {
-      height: 24px;
-      width: 24px;
+    height: 24px;
+    width: 24px;
+
     path {
-      fill: global.$text-color-white;}
+      fill: global.$text-color-white;
+    }
+  }
+}
+
+.iconWrapper_loading {
+  padding-left: 5px;
+  padding-top: 5px;
+  height: 20px;
+  width: 20px;
+  border: 2px solid global.$border-color-blue-blue;
+  border-top: 2px solid global.$text-color-blue-light;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
