@@ -6,41 +6,50 @@
 ## Обзор
 `Будет дополнено либо в процессе реализации либо после ее`
 
->Данный проект реализован в рамках хакатона Лента х Практикум сентябрь’23. Команда IT mates.
+>Данный проект реализован в рамках хакатона Лента х Практикум сентябрь’23. Команда "Группа № 17".
 
-[Макет в Figma](https://www.figma.com/).
+[Макет в Figma](https://www.figma.com/file/SHo2RMuwDP9uN5P79MUpKx/%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0-%E2%84%9617%2C-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-%D0%9F%D1%80%D0%B5%D0%B4%D1%81%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C-%D1%81%D0%BF%D1%80%D0%BE%D1%81%D0%B0-%D0%B4%D0%BB%D1%8F-%D0%9B%D0%B5%D0%BD%D1%82%D1%8B?type=design&node-id=22-67&mode=design&t=MuqiFXnMGi6CfrGf-0).
 
 [Ссылка на ТЗ](https://disk.yandex.ru/i/XcbZVaLP48xMZA).
 
+## Сайт размешен на gh-pages:
+
+[Хакатон Лента. Frontend-разработка группы №17](https://zigfrei.github.io/hackathon-lenta-17-frontend/).
+
 ## Используемые технологии
+* Vite
 * React
-* Sass modules ?
+* Sass modules
 * Redux toolkit
-* Css modules
+* Ant Design
+* Ant Design Charts
 * Docker ?
 * TypeScript ?
 * Jest ?
 
 ## Команда IT mates
 ### Project Manager
-* [Гаврилова Евгения](https://github.com/).
+* [Александр Романов](https://github.com/).
 ### Design
-* [Чертова Галина](https://github.com/).
 * [Клобукова Анастасия](https://github.com/).
+* [Мария Полякова](https://github.com/).
 * [Непомнящих Анна](https://github.com/).
 ### Frontend
 * [Ревазашвили Георгий](https://github.com/zigfrei).
 * [Асланиди Екатерина](https://github.com/katyaslanidi).
 ### Backend
-* [Киселев Никита](https://github.com/10-42).
-* [Мельник Вячеслав](https://github.com/dmsvalik).
+* [Мельник Вячеслав](https://github.com/).
+* [Киселев Никита](https://github.com/).
 ### DS
 * [Горев Даниил](https://github.com/).
 * [Мокров Станислав](https://github.com/).
 * [Коробков Сергей](https://github.com/).
 
-## Локальный запуск проекта:
-* Выполните `npm install && npm start` в терминале, находясь в папке проекта.
+## Доступные команды
+### Локальный запуск проекта:
+* Выполните `npm install && npm run dev` в терминале, находясь в папке проекта.
+### Размешение на gh-page с преддеплоем:
+* `npm run deploy`
 
 ## TODO
 - указать ссылки на сторонние фреймворки, библиотеки, иконки и шрифты если использовались

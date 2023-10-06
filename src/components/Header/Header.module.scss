@@ -6,6 +6,7 @@
   width: 100%;
   min-height: 96px;
   // display: flex;
+
   // align-items: center;
   // justify-content: space-between;
   // z-index: 100;
@@ -40,4 +41,14 @@
   color: global.$text-colorc-sunny-sunny;
   line-height: 48px;
   // min-height: 57px;
+}
+
+.header__title_main {
+  color: var(--sunny-sunny, #FFB900);
+  margin: 6px 0 0 80.22px;
+  font-family: global.$primary-font;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }

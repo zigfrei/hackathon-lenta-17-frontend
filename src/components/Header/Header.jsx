@@ -1,9 +1,12 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { classNames } from '../../helpers/classNames';
 import style from './Header.module.scss';
 import LogoExtraSmallWhite from '../LogoExtraSmallWhite/LogoExtraSmallWhite';
 
-function Header({ isLoggedIn }) {
+function Header() {
+
+  const location = useLocation().pathname;
+
   return (
     <header className={style.header}>
       <div className={style.header__container}>
