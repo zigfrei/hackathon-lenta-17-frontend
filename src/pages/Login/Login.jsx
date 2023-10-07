@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { classNames } from '../../helpers/classNames';
 import style from './Login.module.scss';
 import Header from '../../components/Header/Header';

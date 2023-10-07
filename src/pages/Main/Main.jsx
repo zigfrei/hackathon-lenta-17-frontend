@@ -10,17 +10,14 @@ import Aside from '../../components/Aside/Aside';
 import style from './Main.module.scss';
 
 function Main() {
-
   return (
-    <>
-    <header className={style.header}>
+    <div className={style.page}>
       <Header />
-    </header>
-    <main className={style.main}>
-      <Aside />
-      <ChartPopup />
-    </main>
-    </>
+      <main className={style.main}>
+        <Aside />
+        <ChartPopup />
+      </main>
+    </div>
   );
 }
 

@@ -6,57 +6,11 @@ const initialState = {
   userPassword: '',
   userId: null,
   isLoading: false,
-  registerSucces: false,
-  registerError: null,
+  loginSucces: false,
+  loginError: null,
+  logoutSucces: false,
 };
 
-// const getAllReviews = createAsyncThunk('reviews/getAllReviews', async () => {
-//   try {
-//     return api.getReviews();
-//   } catch (err) {
-//     return err;
-//   }
-// });
-
-// const getReviewById = createAsyncThunk('reviews/getReviewById', async (id) => {
-//   try {
-//     return api.getReviewWithSlug(id);
-//   } catch (err) {
-//     return err;
-//   }
-// });
-
-// export const postRegister: AppThunk = (form: TUser) => {
-//   return function (dispatch: AppDispatch) {
-//     dispatch(authRequest());
-//     fetch(`${baseUrl}auth/register`, {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify(form),
-//     })
-//       .then(checkResponse)
-//       .then((res) => {
-//         if (res && res.success) {
-//           localStorage.setItem("refreshToken", res.refreshToken);
-//           let authToken = res.accessToken.split("Bearer ")[1];
-//           if (authToken) {
-//             setCookie("token", authToken);
-//           }
-//           dispatch(getUserSuccess(res.user.name, res.user.email, res.success));
-//           dispatch(postRegisterSuccess());
-//         } else {
-//           dispatch(authFailed());
-//         }
-//       })
-//       .catch((err) => {
-//         dispatch(authFailed());
-//       });
-//   };
-// };
-
-// registerUser
 const loginUser = createAsyncThunk('auth/loginUser', async (data) => {
   try {
     return api.postLoginUser(data);
@@ -68,16 +22,25 @@ const loginUser = createAsyncThunk('auth/loginUser', async (data) => {
 export const authSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {},
+  reducers: {
+    logoutUser: (state) => {
+      state.userEmail = null;
+      state.userPassword = '';
+      state.userId = null;
+      state.loginSucces = false;
+      state.logoutSucces = true;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(loginUser.pending, (state) => {
       state.isLoading = true;
-      // state.authFailed = false;
-      state.registerError = null;
+      state.loginError = null;
+      state.logoutSucces = false;
     });
     builder.addCase(loginUser.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.registerSucces = true;
+      state.logoutSucces = false;
+      state.loginSucces = true;
       console.log(action.payload);
       state.userName = action.payload.first_name;
       state.userEmail = action.payload.email;
@@ -85,40 +48,20 @@ export const authSlice = createSlice({
     });
     builder.addCase(loginUser.rejected, (state, action) => {
       state.isLoading = false;
-      state.registerSucces = false;
+      state.loginSucces = false;
+      state.loginError = action.payload;
       console.log(action);
-      state.registerError = action.payload;
+      // For a local demonstration of the product //////////////////////////
+      state.loginSucces = true;
+      state.userName = 'Павел Петров';
+      state.userEmail = 'pavel_petrov86@lenta.ru';
+      state.userId = '1';
     });
-    // [registerUser.pending]: (state) => {
-    //   state.loading = true
-    //   state.error = null
-    // },
-    // [registerUser.fulfilled]: (state, { payload }) => {
-    //   state.loading = false
-    //   state.success = true // registration successful
-    // },
-    // [registerUser.rejected]: (state, { payload }) => {
-    //   state.loading = false
-    //   state.error = payload
-    // },
-    // builder.addCase(getAllReviews.fulfilled, (state, action) => {
-    //   state.allReviews = action.payload;
-    // });
-
-    // builder.addCase(getReviewById.fulfilled, (state, action) => {
-    //   state.currentReview = action.payload;
-    // });
-    // builder.addCase(authRequest.fulfilled, (state, action) => {
-    //   state.requestState = true;
-    // });
   },
 });
-
-// const { setCurrentReview } = reviewsSlice.actions;
-// const reviewsSliceReducer = reviewsSlice.reducer;
-const { setCurrentAuth } = authSlice.actions;
+const { logoutUser, setCurrentAuth } = authSlice.actions;
 const authSliceReducer = authSlice.reducer;
 
 export {
-  setCurrentAuth, authSliceReducer, loginUser,
+  setCurrentAuth, logoutUser, authSliceReducer, loginUser,
 };

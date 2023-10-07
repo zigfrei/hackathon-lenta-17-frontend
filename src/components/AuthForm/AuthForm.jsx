@@ -1,12 +1,13 @@
-import { NavLink } from 'react-router-dom';
-import { useCallback, useMemo, useRef } from 'react';
+import {
+  useNavigate,
+} from 'react-router-dom';
+import { useCallback, useMemo, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from '../../helpers/classNames';
 import style from './AuthForm.module.scss';
 import { InputField } from '../InputField/InputField';
 import { ButtonSizeL } from '../ButtonSizeL/ButtonSizeL';
 import useFormValidation from '../../helpers/useFormValidation';
-import DownloadIcon from '../../images/IconDownloadLarge.svg?react';
 import { loginUser } from '../../services/slices/authSlice';
 
 function AuthForm() {
@@ -24,7 +25,8 @@ function AuthForm() {
     values,
   } = useFormValidation();
 
-  const { isLoading, registerSucces, registerError } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
+  const { loginSucces } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
   const sendData = (e) => {
@@ -34,10 +36,17 @@ function AuthForm() {
       email: values.email,
       password: values.password,
     };
-
     console.log(sendData);
     dispatch(loginUser(sendData));
   };
+
+  // eslint-disable-next-line consistent-return
+  useEffect(() => {
+    if (loginSucces) {
+      return navigate('/main');
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loginSucces]);
 
   return (
     <section className={style.mainFormWrapper}>
@@ -76,7 +85,6 @@ function AuthForm() {
             onClick={(e) => sendData(e)}
             placeholder={'Войти'}
           >
-            {/* <DownloadIcon/> */}
           </ButtonSizeL>
         </div>
       </form>
