@@ -1,0 +1,54 @@
+@use '/src/utils/variables/global';
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 87px;
+    height: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: global.$primary-font;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: global.$text-color-white;
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+    // background: global.$text-color-sunny-sunny;
+    background: none;
+    outline: none;
+
+    &:hover {
+        // transition: background-color 0.3s ease-in-out, color 0.3s ease;
+        color: global.$text-color-blue-light;
+        .iconWrapper {
+            svg {
+                path {
+                    fill: global.$text-color-blue-light;
+                }
+            }
+        }
+    }
+
+    &:active {
+        // background: global.$textar-color-sunny-dark;
+        color: global.$text-color-blue-light-30;
+
+        .iconWrapper {
+            svg {
+                path {
+                    fill: global.$text-color-blue-light-30;
+                }
+            }
+        }
+
+        // transition: background-color 0.3s ease-in-out,
+        // color 0.3s ease;
+    }
+}
