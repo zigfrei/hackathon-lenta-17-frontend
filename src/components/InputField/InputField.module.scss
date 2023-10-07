@@ -26,11 +26,14 @@
   outline: none;
 
   &:focus {
-    outline: 2px solid global.$border-color-blue-blue;
-    outline-offset: -1px;
-    &.invalid {
-      outline: unset;
-    }
+    border: 2px solid global.$border-color-blue-blue;
+    
+    // outline: 2px solid global.$border-color-blue-blue;
+    // outline-offset: -1px;
+    // &.invalid {
+    //   // outline: unset;
+
+    // }
     &::placeholder {
       color: global.$text-color-anthracite-light;
     }

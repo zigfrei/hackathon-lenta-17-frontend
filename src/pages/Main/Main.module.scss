@@ -1,3 +1,14 @@
+@use '/src/utils/variables/global';
+
+.page {
+    width: 100%;
+    min-width: 500px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: global.$border-color-blue-blue;
+}
+
 .main {
     background-color: var(--blue-blue, #003C96);
     max-width: 2080px;
@@ -9,6 +20,6 @@
     // justify-content: space-between;
 }
 
-.header {
-    background-color: var(--blue-blue, #003C96);
-}
+// .header {
+//     background-color: var(--blue-blue, #003C96);
+// }

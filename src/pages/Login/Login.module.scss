@@ -1,7 +1,9 @@
 @use '/src/utils/variables/global';
 
 .page {
-  max-width: 1920px;
+  width: 100%;
+  min-width: 500px;
+  // max-width: 1920px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
