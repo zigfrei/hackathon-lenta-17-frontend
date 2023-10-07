@@ -1,37 +1,31 @@
 @use '/src/utils/variables/global';
 
 .header {
-  max-width: 1280px;
-  width: 100%;
+  max-width: 1920px;
+  // width: 100%;
   min-height: 57px;
   display: flex;
   // align-items: center;
   // justify-content: space-between;
   z-index: 100;
-  margin: 34px 31px 0 31px;
+  margin: 0px 24px;
 }
 
 .header__container {
   max-width: 1280px;
   width: 100%;
   min-height: 57px;
-  margin: 0;
-  padding: 0;
+  margin: 0px 24px;
+  // margin: 0;
+  // padding: 0;
   display: flex;
   justify-content: flex-start;
   // align-items: center;
 }
 
-// .header__image {
-//   width: 202.781px;
-//   height: 46px;
-//   flex-shrink: 0;
-//   padding: 0;
-// }
-
 .header__title {
-  margin: 6px 0 0 80.22px;
-  // padding-top: 6px;
+  // margin: 24px 0 0 16px;
+  // padding-top: 24px;
   font-family: global.$primary-font;
   font-size: 40px;
   font-style: normal;
@@ -42,10 +36,11 @@
 
 .header__title_main {
   color: var(--sunny-sunny, #FFB900);
-  margin: 6px 0 0 80.22px;
+  // margin: 6px 0 0 16px;
   font-family: global.$primary-font;
   font-size: 40px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  line-height: 48px;
 }

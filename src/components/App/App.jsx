@@ -8,6 +8,7 @@ import style from './App.module.scss';
 import Header from '../Header/Header';
 import Main from '../../pages/Main/Main';
 import Login from '../../pages/Login/Login';
+import { ButtonLabel } from '../ButtonLabel/ButtonLabel';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       {/* <main className={style.main}> */}
       <Routes>
         <Route path='/' element={<Login />} />
+        {/* <Route path='/' element={<ButtonLabel />} /> */}
         <Route path='/main' element={<Main />} />
       </Routes>
       {/* </main> */}

@@ -44,8 +44,9 @@ function AuthForm() {
           setValues={setValues}
         />
         <div className={style.buttonWrapper}>
-          <ButtonSizeL>
-            {/* <DownloadIcon /> */}
+          <ButtonSizeL
+            placeholder={"Button"}
+          >
           </ButtonSizeL>
         </div>
       </div>

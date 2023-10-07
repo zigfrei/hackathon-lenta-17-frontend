@@ -5,6 +5,7 @@ import LogoImgMain from '../../images/logo-main.svg?react';
 
 function Logo({ isLoggedIn }) {
   return (
+    <>
     <div className={style.logo_container}>
       {
         isLoggedIn ?
@@ -12,6 +13,7 @@ function Logo({ isLoggedIn }) {
           <LogoImg />
       }
     </div>
+    </>
   );
 }
 

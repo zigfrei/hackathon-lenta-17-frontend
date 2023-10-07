@@ -1,10 +1,27 @@
 .logo_container {
+    // margin: 26px 24px;
+    display: flex;
+    width: 237px;
+    height: 96px;
+    // padding: 26px 24px;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
 
+    svg {
+        width: 237px;
+        height: 96px;
+            path {
+                width: 237px;
+                height: 96px;
+                padding: 0;
+            }
+    }
 }
 
 .logo__image {
-    width: 202.781px;
-    height: 46px;
     flex-shrink: 0;
     padding: 0;
+    width: 237px;
+    height: 96px;
 }

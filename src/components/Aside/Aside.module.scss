@@ -1,7 +1,28 @@
+@use '/src/utils/variables/global';
+
 .aside {
-   width: 400px;
-   height: 655px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 24px;
+   width: 440px;
+   height: 608;
    background-color: #F2F1F1;
-   margin: 37px 28px 0 25px;
+   padding: 32px 20px;
+   margin: 96px 32px 152px 40px;
    border-radius: 20px;
+}
+
+.aside__title {
+   font-family: global.$primary-font;
+   font-size: 32px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 40px;
+   padding: 0;
+   margin: 0;
+}
+
+.aside__list {
+   list-style: none;
 }

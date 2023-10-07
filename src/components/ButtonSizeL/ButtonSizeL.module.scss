@@ -14,21 +14,136 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
-  color: global.$text-color-white;
+  color: global.$border-color-blue-blue;
   padding: 0;
   margin: 0;
   border-radius: 12px;
-  background: global.$border-color-blue-blue;
+  background: global.$text-color-sunny-sunny;
   border: none;
   outline: none;
 
   &:hover {
-    background: global.$color-blue-light;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+
+    background: global.$text-color-sunny-tan;
+    color: global.$text-color-blue-dark;
 
     .iconWrapper {
       svg {
         path {
-          fill: global.$border-color-blue-blue;
+          fill: global.$text-color-blue-dark;
+        }
+      }
+    }
+  }
+
+  &:active {
+    background: global.$textar-color-sunny-dark;
+    color: global.$text-color-blue-dark;
+
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$text-color-white;
+        }
+      }
+    }
+
+    transition: background-color 0.3s ease-in-out,
+    color 0.3s ease;
+  }
+
+  &:disabled {
+    cursor: unset;
+    background: global.$border-color-anthracite-20;
+    color: global.$text-color-anthracite-dark;
+
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$text-color-anthracite-dark;
+        }
+      }
+    }
+  }
+
+  transition: background-color 0.3s ease-in-out,
+  color 0.3s ease;
+}
+
+.iconWrapper {
+  padding-left: 13px;
+  padding-top: 5px;
+
+  svg {
+    height: 24px;
+    width: 24px;
+
+    path {
+      fill: global.$text-color-blue-dark;
+    }
+  }
+}
+
+.iconDownloadWrapper {
+  width: 24px;
+  height: 24px;
+  border: 2px solid global.$text-color-blue-dark;
+  ;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.noIcon {
+  display: none;
+}
+
+.secondary_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 320px;
+  height: 56px;
+  cursor: pointer;
+  font-family: global.$primary-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: global.$border-color-blue-blue;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  background: global.$text-color-blue-light;
+  border: none;
+  outline: none;
+
+  &:hover {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+
+    background: global.$color-blue-light;
+    color: global.$text-color-white;
+
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$text-color-blue-dark;
         }
       }
     }
@@ -45,71 +160,62 @@
         }
       }
     }
-  }
 
-  &:disabled {
-    cursor: unset;
-    background: global.$border-color-anthracite-20;
-    color: global.$text-color-anthracite-dark;
-
-    .iconWrapper {
-      svg {
-        path {
-          fill: global.$text-color-anthracite-dark;
-        }
-      }
-    }
+    transition: background-color 0.3s ease-in-out,
+    color 0.3s ease;
   }
 }
 
-.button_loading {
+.tertiary_button {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 400px;
+  width: 320px;
   height: 56px;
   cursor: pointer;
+  font-family: global.$primary-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: global.$border-color-blue-blue;
   padding: 0;
   margin: 0;
   border-radius: 12px;
-  border: none;
+  background: global.$text-color-white;
+  border: 2px solid global.$border-color-blue-blue;
   outline: none;
-  background: global.$text-color-blue-light;
-}
 
-.iconWrapper {
-  padding-left: 5px;
-  padding-top: 5px;
+  &:hover {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
 
-  svg {
-    height: 24px;
-    width: 24px;
+    background: global.$border-color-blue-blue;
+    color: global.$text-color-white;
 
-    path {
-      fill: global.$text-color-white;
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$text-color-blue-dark;
+        }
+      }
     }
   }
-}
 
-.iconWrapper_loading {
-  padding-left: 5px;
-  padding-top: 5px;
-  height: 20px;
-  width: 20px;
-  border: 2px solid global.$border-color-blue-blue;
-  border-top: 2px solid global.$text-color-blue-light;
-  border-radius: 50%;
-  animation: spin 2s linear infinite;
+  &:active {
+    background: global.$color-blue-light;
+    color: global.$text-color-white;
 
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$text-color-white;
+        }
+      }
     }
 
-    100% {
-      transform: rotate(360deg);
-    }
+    transition: background-color 0.3s ease-in-out,
+    color 0.3s ease;
   }
 }
