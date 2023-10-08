@@ -17,7 +17,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 24px;
   color: global.$text-color-anthracite-dark;
   padding: 28px 0 8px 16px;
   margin: 0;
@@ -27,13 +27,6 @@
 
   &:focus {
     border: 2px solid global.$border-color-blue-blue;
-    
-    // outline: 2px solid global.$border-color-blue-blue;
-    // outline-offset: -1px;
-    // &.invalid {
-    //   // outline: unset;
-
-    // }
     &::placeholder {
       color: global.$text-color-anthracite-light;
     }

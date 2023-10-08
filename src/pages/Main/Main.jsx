@@ -8,14 +8,18 @@ import ChartPopup from '../../components/ChartPopup/ChartPopup';
 import Header from '../../components/Header/Header';
 import Aside from '../../components/Aside/Aside';
 import style from './Main.module.scss';
+import { UpdateDate } from '../../components/UpdateDate/UpdateDate';
 
 function Main() {
   return (
     <div className={style.page}>
       <Header />
       <main className={style.main}>
-        <Aside />
-        <ChartPopup />
+        <div className={style.leftColumn}>
+          <Aside />
+          <UpdateDate />
+        </div>
+        {/* <ChartPopup /> */}
       </main>
     </div>
   );
