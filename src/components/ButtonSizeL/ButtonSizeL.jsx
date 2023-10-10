@@ -7,7 +7,6 @@ import style from './ButtonSizeL.module.scss';
 
 export const ButtonSizeL = ({
   onClick,
-  loader,
   disabled,
   type,
   placeholder,

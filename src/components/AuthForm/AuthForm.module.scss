@@ -5,7 +5,7 @@
   min-width: 440px;
   min-height: 340px;
   border-radius: 20px;
-  background-color: global.$text-color-white;
+  background-color: global.$color-white;
 }
 
 .main {
@@ -19,7 +19,7 @@
   margin: 0 auto;
   padding: 0;
   padding-bottom: 24px;
-  color: global.$text-color-black;
+  color: global.$color-black;
   font-family: global.$primary-font;
   font-size: 40px;
   font-weight: 500;
@@ -30,7 +30,7 @@
 .text {
   margin: 0 auto;
   padding: 0;
-  color: global.$text-color-gray;
+  color: global.$color-gray;
   font-family: global.$secondary-font;
   font-size: 16px;
   font-weight: 400;

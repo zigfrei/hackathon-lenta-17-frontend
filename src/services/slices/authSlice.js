@@ -41,7 +41,6 @@ export const authSlice = createSlice({
       state.isLoading = false;
       state.logoutSucces = false;
       state.loginSucces = true;
-      console.log(action.payload);
       state.userName = action.payload.first_name;
       state.userEmail = action.payload.email;
       state.userId = action.payload.id;
@@ -50,7 +49,6 @@ export const authSlice = createSlice({
       state.isLoading = false;
       state.loginSucces = false;
       state.loginError = action.payload;
-      console.log(action);
       // For a local demonstration of the product //////////////////////////
       state.loginSucces = true;
       state.userName = 'Павел Петров';
@@ -59,9 +57,7 @@ export const authSlice = createSlice({
     });
   },
 });
-const { logoutUser, setCurrentAuth } = authSlice.actions;
+const { logoutUser } = authSlice.actions;
 const authSliceReducer = authSlice.reducer;
 
-export {
-  setCurrentAuth, logoutUser, authSliceReducer, loginUser,
-};
+export { logoutUser, authSliceReducer, loginUser };
