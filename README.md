@@ -25,7 +25,7 @@
 
 ## Переменные цветов и шрифтов размещены в файле `_global.scss`
 
-## Команда IT mates
+## Команда № 17
 ### Project Manager
 * [Александр Романов](https://github.com/).
 ### Design
