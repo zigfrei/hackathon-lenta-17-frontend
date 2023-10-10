@@ -36,7 +36,6 @@ function AuthForm() {
       email: values.email,
       password: values.password,
     };
-    console.log(sendData);
     dispatch(loginUser(sendData));
   };
 
@@ -80,7 +79,6 @@ function AuthForm() {
         </div>
         <div className={style.buttonWrapper}>
           <ButtonSizeL
-            loader={true}
             disabled={!isValid}
             onClick={(e) => sendData(e)}
             placeholder={'Войти'}

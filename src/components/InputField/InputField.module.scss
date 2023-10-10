@@ -18,22 +18,22 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  color: global.$text-color-anthracite-dark;
+  color: global.$color-anthracite-dark;
   padding: 28px 0 8px 16px;
   margin: 0;
   border-radius: 12px;
-  border: 1px solid global.$border-color-anthracite-20;
+  border: 1px solid global.$color-anthracite-20;
   outline: none;
 
   &:focus {
-    border: 2px solid global.$border-color-blue-blue;
+    border: 2px solid global.$color-blue-blue;
     &::placeholder {
-      color: global.$text-color-anthracite-light;
+      color: global.$color-anthracite-light;
     }
   }
 
   &::placeholder {
-    color: global.$text-color-white;
+    color: global.$color-white;
   }
 
   &:hover {
@@ -41,14 +41,14 @@
   }
 
   &.invalid {
-    border: 2px solid global.$text-colorr-crimson-crimson;
+    border: 2px solid global.$color-crimson-crimson;
   }
 }
 
 .error {
   align-items: center;
   padding-top: 64px;
-  color: global.$text-colorr-crimson-crimson;
+  color: global.$color-crimson-crimson;
   font-family: global.$primary-font;
   font-size: 14px;
   font-weight: 500;
@@ -69,7 +69,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  color: global.$text-color-anthracite-dark;
+  color: global.$color-anthracite-dark;
   transition: top 0.3s ease, color 0.3s ease, font-family 0.3s ease,
     font-size 0.3s ease, font-weight 0.3s ease;
 }
@@ -77,14 +77,14 @@
 .input:focus + .label,
 .input:not(:placeholder-shown) + .label {
   top: 8px;
-  color: global.$text-color-anthracite-80;
+  color: global.$color-anthracite-80;
   font-family: global.$primary-font;
   font-size: 14px;
   font-weight: 500;
 }
 
 .input:disabled + .label {
-  color: global.$text-color-anthracite-light;
+  color: global.$color-anthracite-light;
 }
 
 .resetButton {

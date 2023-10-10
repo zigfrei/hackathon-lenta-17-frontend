@@ -14,32 +14,32 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
-  color: global.$border-color-blue-blue;
+  color: global.$color-blue-blue;
   padding: 0;
   margin: 0;
   border-radius: 12px;
-  background: global.$text-color-sunny-sunny;
+  background: global.$color-sunny-sunny;
   border: none;
   outline: none;
   &:hover {
     transition: background-color 0.3s ease-in-out, color 0.3s ease;
 
-    background: global.$text-color-sunny-tan;
-    color: global.$text-color-blue-dark;
+    background: global.$color-sunny-tan;
+    color: global.$color-blue-dark;
     .iconWrapper {
       svg {
         path {
-          fill: global.$text-color-blue-dark;}
+          fill: global.$color-blue-dark;}
       }
     }
   }
   &:active {
-    background: global.$textar-color-sunny-dark;
-    color:  global.$text-color-blue-dark;;
+    background: global.$color-sunny-dark;
+    color:  global.$color-blue-dark;;
     .iconWrapper {
       svg {
         path {
-          fill: global.$text-color-white;}
+          fill: global.$color-white;}
       }
     }
      transition: background-color 0.3s ease-in-out, color 0.3s ease;
@@ -47,12 +47,12 @@
 
   &:disabled {
     cursor: unset;
-    background: global.$border-color-anthracite-20;
-    color: global.$text-color-anthracite-dark;
+    background: global.$color-anthracite-20;
+    color: global.$color-anthracite-dark;
     .iconWrapper {
       svg {
         path {
-          fill: global.$text-color-anthracite-dark;}
+          fill: global.$color-anthracite-dark;}
       }
     }
   }
@@ -66,14 +66,14 @@
       height: 24px;
       width: 24px;
     path {
-      fill:  global.$text-color-blue-dark;}
+      fill:  global.$color-blue-dark;}
   }
 }
 
 .iconDownloadWrapper {
   width: 24px;
     height: 24px;
-    border: 2px solid global.$text-color-blue-dark;;
+    border: 2px solid global.$color-blue-dark;;
     border-bottom-color: transparent;
     border-radius: 50%;
     display: inline-block;
@@ -109,37 +109,37 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
-  color: global.$border-color-blue-blue;
+  color: global.$color-blue-blue;
   padding: 0;
   margin: 0;
   border-radius: 12px;
-  background: global.$text-color-blue-light;
+  background: global.$color-blue-light;
   border: none;
   outline: none;
 
   &:hover {
     transition: background-color 0.3s ease-in-out, color 0.3s ease;
 
-    background: global.$color-blue-light;
-    color: global.$text-color-white;
+    background: global.$color-blue-dark;
+    color: global.$color-white;
 
     .iconWrapper {
       svg {
         path {
-          fill: global.$text-color-blue-dark;
+          fill: global.$color-blue-dark;
         }
       }
     }
   }
 
   &:active {
-    background: global.$color-blue-light;
-    color: global.$text-color-white;
+    background: global.$color-blue-dark;
+    color: global.$color-white;
 
     .iconWrapper {
       svg {
         path {
-          fill: global.$text-color-white;
+          fill: global.$color-white;
         }
       }
     }
@@ -163,37 +163,37 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
-  color: global.$border-color-blue-blue;
+  color: global.$color-blue-blue;
   padding: 0;
   margin: 0;
   border-radius: 12px;
-  background: global.$text-color-white;
-  border: 2px solid global.$border-color-blue-blue;
+  background: global.$color-white;
+  border: 2px solid global.$color-blue-blue;
   outline: none;
 
   &:hover {
     transition: background-color 0.3s ease-in-out, color 0.3s ease;
 
-    background: global.$border-color-blue-blue;
-    color: global.$text-color-white;
+    background: global.$color-blue-blue;
+    color: global.$color-white;
 
     .iconWrapper {
       svg {
         path {
-          fill: global.$text-color-blue-dark;
+          fill: global.$color-blue-dark;
         }
       }
     }
   }
 
   &:active {
-    background: global.$color-blue-light;
-    color: global.$text-color-white;
+    background: global.$color-blue-dark;
+    color: global.$color-white;
 
     .iconWrapper {
       svg {
         path {
-          fill: global.$text-color-white;
+          fill: global.$color-white;
         }
       }
     }

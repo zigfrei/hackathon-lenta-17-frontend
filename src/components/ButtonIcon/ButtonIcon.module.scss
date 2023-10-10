@@ -15,7 +15,7 @@
     .iconWrapper {
       svg {
         path {
-          fill: global.$text-color-blue-dark;}
+          fill: global.$color-blue-dark;}
       }
     }
   }
@@ -26,6 +26,6 @@
       height: 24px;
       width: 24px;
     path {
-      fill:  global.$border-color-blue-blue;}
+      fill:  global.$color-blue-blue;}
   }
 }

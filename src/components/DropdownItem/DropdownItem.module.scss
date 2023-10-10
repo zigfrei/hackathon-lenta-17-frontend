@@ -1,0 +1,20 @@
+@use '/src/utils/variables/global';
+
+
+.select {
+    box-sizing: border-box;
+  width: 400px;
+  height: 56px;
+  font-family: global.$secondary-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: global.$color-anthracite-dark;
+//   padding: 28px 0 8px 16px;
+  margin: 0;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid global.$color-anthracite-20;
+  outline: none;
+}

@@ -16,34 +16,34 @@
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
-    color: global.$text-color-white;
+    color: global.$color-white;
     padding: 0;
     margin: 0;
     border-radius: 12px;
-    // background: global.$text-color-sunny-sunny;
+    // background: global.$color-sunny-sunny;
     background: none;
     outline: none;
 
     &:hover {
         // transition: background-color 0.3s ease-in-out, color 0.3s ease;
-        color: global.$text-color-blue-light;
+        color: global.$color-blue-light;
         .iconWrapper {
             svg {
                 path {
-                    fill: global.$text-color-blue-light;
+                    fill: global.$color-blue-light;
                 }
             }
         }
     }
 
     &:active {
-        // background: global.$textar-color-sunny-dark;
-        color: global.$text-color-blue-light-30;
+        // background: global.$color-sunny-dark;
+        color: global.$color-blue-light-30;
 
         .iconWrapper {
             svg {
                 path {
-                    fill: global.$text-color-blue-light-30;
+                    fill: global.$color-blue-light-30;
                 }
             }
         }

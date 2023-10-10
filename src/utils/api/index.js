@@ -10,14 +10,32 @@ class Api {
     return Promise.reject(new Error(`${res.status}`));
   }
 
-  async getUser() {
-    const res = await fetch(`${this._url}/api/`);
+  async getCategories() {
+    const res = await fetch(`${this._url}/categories/`);
     const data = await this.constructor._checkResponse(res);
     return data.results;
   }
 
-  async postLoginUser(data) {
-    const res = await fetch(`${this._url}/api/v1/users/`, {
+  async getShops() {
+    const res = await fetch(`${this._url}/shops/`);
+    const data = await this.constructor._checkResponse(res);
+    return data.results;
+  }
+
+  async getSales() {
+    const res = await fetch(`${this._url}/sales/`);
+    const data = await this.constructor._checkResponse(res);
+    return data.results;
+  }
+
+  async getForecast() {
+    const res = await fetch(`${this._url}/forecast/`);
+    const data = await this.constructor._checkResponse(res);
+    return data.results;
+  }
+
+  async postForecast(data) {
+    const res = await fetch(`${this._url}/forecast/create`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -25,26 +43,20 @@ class Api {
       body: JSON.stringify(data),
     });
     return this.constructor._checkResponse(res);
+  }
 
-    // const res = await fetch(`${this._url}/api/v1/reviews/`);
-    // const data = await this.constructor._checkResponse(res);
-    // if (res.ok) {
-    //   if (data.count === 0) { data.results = mockSliderDataBottom; } else {
-    //     let firstId = 1;
-    //     data.results.forEach((review) => {
-    //       review.id = firstId;
-    //       firstId += 1;
-    //     });
-    //   }
-    // } else {
-    //   return Promise.reject(new Error(`${res.status}`));
-    // }
-    // return data.results;
+  async postLoginUser(data) {
+    const res = await fetch(`${this._url}/api/auth/`, {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+    return this.constructor._checkResponse(res);
   }
 }
 
-export const api = new Api('https://randomuser.me/', {
+export const api = new Api('http://127.0.0.1:8000/', {
   'content-type': 'application/json',
 });
-
-// export const api = new Api(process.env.API_URL || 'http://localhost:8000', { 'content-type': 'application/json' });
