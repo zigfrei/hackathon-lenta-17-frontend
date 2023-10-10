@@ -1,0 +1,37 @@
+@use '/src/utils/variables/global';
+
+.page {
+    width: 100%;
+    min-width: 500px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: global.$color-blue-blue;
+}
+
+.main {
+    background-color: var(--blue-blue, #003C96);
+    padding-top: 90px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    // max-width: 2080px;
+    // width: 100%;
+    // min-height: 1080px;
+    // height: 100%;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+}
+
+.leftColumn {
+    box-sizing: border-box;
+    height: calc(100vh - 192px - 40px);
+    padding-right: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+// .header {
+//     background-color: var(--blue-blue, #003C96);
+// }

@@ -1,0 +1,49 @@
+@use '/src/utils/variables/global';
+
+.mainFormWrapper {
+  margin: 0 auto;
+  min-width: 440px;
+  min-height: 340px;
+  border-radius: 20px;
+  background-color: global.$color-white;
+}
+
+.main {
+  padding: 32px 20px;
+  // width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 24px;
+  color: global.$color-black;
+  font-family: global.$primary-font;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  font-size: normal;
+}
+
+.text {
+  margin: 0 auto;
+  padding: 0;
+  color: global.$color-gray;
+  font-family: global.$secondary-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  font-size: normal;
+}
+
+.inputWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonWrapper {
+  padding-top: 8px;
+}

@@ -1,0 +1,47 @@
+@use '/src/utils/variables/global';
+
+.header {
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-top: 6px;
+  padding-right: 42px;
+  width: 100%;
+  min-height: 96px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__container_auth {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header__title {
+  margin: 0;
+  padding: 27px 0 16px 16px;
+  font-family: global.$primary-font;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  color: global.$color-sunny-sunny;
+  line-height: 48px;
+}
+
+.header__container_main {
+  padding-top: 9px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.emailName {
+  margin: 0; 
+  padding: 0;
+  padding-right: 19px;
+  font-family: global.$primary-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: global.$color-white;
+}

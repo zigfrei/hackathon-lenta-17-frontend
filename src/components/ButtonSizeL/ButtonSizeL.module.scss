@@ -1,0 +1,204 @@
+@use '/src/utils/variables/global';
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 400px;
+  height: 56px;
+  cursor: pointer;
+  font-family: global.$primary-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: global.$color-blue-blue;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  background: global.$color-sunny-sunny;
+  border: none;
+  outline: none;
+  &:hover {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+
+    background: global.$color-sunny-tan;
+    color: global.$color-blue-dark;
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$color-blue-dark;}
+      }
+    }
+  }
+  &:active {
+    background: global.$color-sunny-dark;
+    color:  global.$color-blue-dark;;
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$color-white;}
+      }
+    }
+     transition: background-color 0.3s ease-in-out, color 0.3s ease;
+  }
+
+  &:disabled {
+    cursor: unset;
+    background: global.$color-anthracite-20;
+    color: global.$color-anthracite-dark;
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$color-anthracite-dark;}
+      }
+    }
+  }
+  transition: background-color 0.3s ease-in-out, color 0.3s ease;
+}
+
+.iconWrapper {
+  padding-left: 13px;
+  padding-top: 5px;
+  svg {
+      height: 24px;
+      width: 24px;
+    path {
+      fill:  global.$color-blue-dark;}
+  }
+}
+
+.iconDownloadWrapper {
+  width: 24px;
+    height: 24px;
+    border: 2px solid global.$color-blue-dark;;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.noIcon {
+  display: none;
+}
+
+.secondary_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 320px;
+  height: 56px;
+  cursor: pointer;
+  font-family: global.$primary-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: global.$color-blue-blue;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  background: global.$color-blue-light;
+  border: none;
+  outline: none;
+
+  &:hover {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+
+    background: global.$color-blue-dark;
+    color: global.$color-white;
+
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$color-blue-dark;
+        }
+      }
+    }
+  }
+
+  &:active {
+    background: global.$color-blue-dark;
+    color: global.$color-white;
+
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$color-white;
+        }
+      }
+    }
+
+    transition: background-color 0.3s ease-in-out,
+    color 0.3s ease;
+  }
+}
+
+.tertiary_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 320px;
+  height: 56px;
+  cursor: pointer;
+  font-family: global.$primary-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: global.$color-blue-blue;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  background: global.$color-white;
+  border: 2px solid global.$color-blue-blue;
+  outline: none;
+
+  &:hover {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+
+    background: global.$color-blue-blue;
+    color: global.$color-white;
+
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$color-blue-dark;
+        }
+      }
+    }
+  }
+
+  &:active {
+    background: global.$color-blue-dark;
+    color: global.$color-white;
+
+    .iconWrapper {
+      svg {
+        path {
+          fill: global.$color-white;
+        }
+      }
+    }
+
+    transition: background-color 0.3s ease-in-out,
+    color 0.3s ease;
+  }
+}

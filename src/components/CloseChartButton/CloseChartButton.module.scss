@@ -1,0 +1,20 @@
+@use '/src/utils/variables/global';
+
+.button {
+  all:unset;
+  cursor: pointer;
+  position: absolute;
+  z-index: 46;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+}
+
+.iconWrapper {
+  svg {
+      height: 24px;
+      width: 24px;
+    path {
+      fill:  global.$color-black;}
+  }
+}
